@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(0, 6, 35);
+    color: rgb(105, 231, 132);
+    min-height: 200vh;
+    overflow-x: hidden;
+}
+
+#nav {
+    padding-block: 1%;
+}
+
+.tag {
+    color: rgb(157, 168, 196);
+    text-decoration: none;
+    margin: 30px;
+    font-size: 1.5rem;
+    padding: 10px;
+    transition: all ease 0.2s;
+}
+
+.tag:hover {
+    color: rgb(169, 204, 207); 
+    transform: scale(1.1);
+}
+
+.premium:hover {
+    color: transparent;
+    transform: scale(1.02);
+}
+
+.premium {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgKYVrrGR4dZ41izUFhFrEpUQueU8afEbHlQ&s);
+    color: transparent;
+    background-size: contain;
+    background-clip: text;
+    font-weight: bolder;
+}
+
+.glow {
+    outline: solid rgb(41, 44, 66) 2px;
+    border-radius: 10px;
+    color: rgb(139, 139, 139);
+    background-color: rgba(30, 0, 255, 0.153);
+}
+
+.App {
+    height: 120vh;
+}
+
+.App::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    top: 80%;
+    background-image: linear-gradient(to bottom, transparent, rgb(0, 6, 35));
+    z-index: 0;
+}
+
+#main_icon1,
+#main_icon2,
+#main_icon3 {
+    position: absolute;
+    left: 45vw;
+}
+
+#main_icon1 {
+    transform: rotate(30deg) translateX(100px) translateY(-30px);
+}
+
+#main_icon2 {
+    transform: rotate(-30deg) translateX(-100px) translateY(-30px);
+}
+
+#main_icon3 {
+    transform: translateX(-20px);
+}
+
+#searchBox input {
+    z-index: 5;
+    padding-inline: 2vw;
+    padding-block: 1vh;
+    width: 45vw;
+    margin-bottom: 15vh;
+    border: solid white 3px;
+    background-color: rgba(255, 255, 255, 0.771);
+    text-align: left;
+    border-radius: 20px;
+    height: 7vh;
+    margin-top: 45vh;
+    margin-left: 27vw;
+    font-size: 1.5rem;
+    font-weight: 800;
+    word-spacing: 2px;
+    letter-spacing: 3px;
+    outline: none;
+}
+
+#searchBox input:focus {
+    outline: solid rgb(255, 217, 0) 3px;
+}
+
+#moviesContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.movie_card {
+    border-top: solid rgb(27, 30, 52) 6px;
+    border-bottom: solid rgb(27, 30, 52) 6px;
+    display: flex;
+    flex-direction: row;
+    transition: all ease 0.2s;
+}
+
+.movie_card:hover {
+    transform: scale(1.02);
+    transform: translateX(-20px);
+}
+
+.akaContainer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-image: radial-gradient(circle farthest-side, rgba(0, 247, 255, 0.207), rgba(0, 255, 242, 0.108), transparent);
+}
+
+.movieAka {
+    padding-inline: 1vw;
+    width: 30vw;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.281);
+    /* border: solid rgb(152, 0, 0) 3px; */
+    color: transparent;
+    background-clip: text;
+    text-shadow: 0px 0px rgba(208, 255, 0, 0.175);
+    -webkit-text-stroke: 1px rgba(255, 234, 0, 0.2);
+}
+
+.movieAddInfo {
+    margin: 1vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.movie-info-container {
+    width: 24vw;
+    padding-block: 1vh;
+    padding-inline: 10vw;
+    border-left: solid rgba(55, 55, 55, 0.601) 3px;
+    border-right: solid rgba(55, 55, 55, 0.601) 3px;
+    background-image: linear-gradient(to right, transparent, rgba(4, 6, 113, 0.39));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoType,
+.info {
+    display: inline-block;
+    margin-inline: 1vw;
+    text-decoration: none;
+}
+
+.imdbiv:hover,
+.imdburl:hover {
+    text-decoration: underline;
+    color: rgb(51, 51, 108);
+}
+
+.infoType {
+    background-image: linear-gradient(to right, rgb(48, 121, 124), rgb(86, 70, 177));
+    color: transparent;
+    background-clip: text;
+}
+
+.info {
+    color: rgb(115, 118, 150);
+}
